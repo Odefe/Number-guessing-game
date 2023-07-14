@@ -1,0 +1,18 @@
+import random
+
+number = random.randint(1,25)
+number_of_guesses = 0
+
+while number_of_guesses < 5:
+    print("Guess a number")
+    guess = input()
+    guess = int(guess)
+    number_of_guesses +=1
+
+    if guess == number :
+        print("Correct, you made it in " + str(number_of_guesses) + " tries!")
+        break
+    elif guess != number:
+        print("No, Try Again")
+        if number_of_guesses == 5:
+            print("Sorry, you didn't make it. The number was: " + str(number))
